@@ -148,14 +148,28 @@ main > section{
 .section-des{
   max-width: 540px;
 }
-
+/* sponsor */
+.sponsors{
+  max-width: 540px;
+  text-align: center;
+  margin: 0 auto;
+  m
+}
+.sponsor-companies{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 50px;
+}
+.sponsor-companies > img{
+  filter: grayscale(100%);
+}
 /* responsive media query */
 @media  screen and (max-width: 576px){
    .navbar, .nav-links, .team{
     flex-direction: column;
    }
 
-   .team-img-container, .facts-container{
+   .team-img-container, .facts-container, .sponsor-companies{
     grid-template-columns: 1fr;
    }
    .our-features{
@@ -166,11 +180,21 @@ main > section{
     gap: 24px;
     margin-left: 65px;
    }
+   .sponsor-companies{
+    justify-content: center;
+    gap: 24px;
+    margin-left: 85px;
+   }
 }
 /* medium-device */
 @media  screen and (min-width: 576px) and (max-width: 992px){
   .team{
     flex-direction: column; 
+  }
+  .sponsor-companies, .facts-container{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    /* justify-content: center;akhane problem justify kaj hoy na */
   }
 }
   
